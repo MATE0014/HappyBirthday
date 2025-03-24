@@ -6,15 +6,17 @@ import { motion } from "framer-motion";
 
 export default function BalloonsGallery({ onGifClick }) {
   const photos = [
-    "/sample.jfif",
-    "/sample.jfif",
-    "/sample.jfif",
-    "/sample.jfif",
-    "/sample.jfif",
-    "/sample.jfif",
-    "/sample.jfif",
-    "/sample.jfif",
-    "/hidden.gif", // Hidden GIF file
+    "/gallery/one.jpg",
+    "/gallery/two.jpg",
+    "/gallery/three.jpg",
+    "/gallery/four.jpg",
+    "/gallery/five.jpg",
+    "/gallery/six.jpg",
+    "/gallery/seven.jpg",
+    "/gallery/eight.jpg",
+    "/gallery/nine.jpg",
+    "/gallery/ten.jpg",
+    "/hidden.gif",
   ];
 
   const [startIndex, setStartIndex] = useState(0);
@@ -52,7 +54,7 @@ export default function BalloonsGallery({ onGifClick }) {
   return (
     <div className="flex flex-col items-center justify-center my-8">
       {/* Title */}
-      <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-white text-center">
+      <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-white text-center tracking-wider">
         Wanted: Alive & Smiling
       </h2>
 

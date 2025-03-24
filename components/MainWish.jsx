@@ -14,15 +14,15 @@ export default function MainWish() {
   }, []);
 
   return (
-    <h1 className="text-4xl sm:text-6xl font-bold mb-8">
+    <h1 className="text-4xl/[3.5rem] sm:text-6xl font-bold mb-8 tracking-widest mt-5">
       Happy{" "}
       <span
         className="inline-block font-bold animate-glow"
         style={{ color: `hsl(${hue}, 100%, 50%)` }}
       >
-        xth
+        18th
       </span>{" "}
-      Birthday, User!
+      Birthday, Anushkaa!
     </h1>
   );
 }

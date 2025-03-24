@@ -75,10 +75,10 @@ const TodoList = ({ tasks, setTasks }) => {
             <SheetTitle className="sr-only">Check List</SheetTitle>
             <SheetDescription className="sr-only">A Check List Is Here</SheetDescription>
 
-            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-2 text-white">
+            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-2 text-white tracking-wider">
               Check List
             </h2>
-            <p className="text-center text-gray-400 text-sm sm:text-base mb-4">
+            <p className="text-center text-gray-400 text-sm sm:text-base mb-4 tracking-wider">
               Complete all tasks for a surprise!
             </p>
 
@@ -103,7 +103,7 @@ const TodoList = ({ tasks, setTasks }) => {
                     checked={task.completed}
                     onChange={(e) => handleTaskCheck(index, e)}
                   />
-                  <span className="text-sm sm:text-base">{task.text}</span>
+                  <span className="text-sm sm:text-base tracking-wider">{task.text}</span>
                 </li>
               ))}
             </ul>
@@ -113,7 +113,7 @@ const TodoList = ({ tasks, setTasks }) => {
               className={`
                 inline-flex items-center justify-center whitespace-nowrap rounded-full text-base font-semibold ring-offset-white transition-colors
                 border border-accent bg-transparent text-accent
-                h-[48px] px-6
+                h-[48px] px-6 tracking-widest
                 ${
                   surpriseEnabled
                     ? "hover:bg-accent hover:text-primary cursor-pointer"
@@ -139,8 +139,8 @@ const TodoList = ({ tasks, setTasks }) => {
         >
           <div className="bg-[#27272c] p-4 sm:p-6 rounded-xl text-center shadow-lg w-[90%] sm:w-[60%]">
             <FaCheckCircle className="text-accent text-4xl sm:text-5xl mx-auto mb-4" />
-            <h2 className="text-white text-xl sm:text-2xl mb-2">FINAL SURPRISE UNLOCKED YAY</h2>
-            <p className="text-white text-sm sm:text-base mb-4">
+            <h2 className="text-white text-xl sm:text-2xl mb-2 tracking-wider">🎆Final Surprise Unlocked Yay!🎆</h2>
+            <p className="text-white text-sm/10 sm:text-base mb-4 tracking-wider">
               Congratulations! You've completed all the tasks. Here's your final surprise message:
               <br />
               "You are amazing! Keep shining and achieving your goals. 🎉✨"

@@ -13,7 +13,7 @@ export default function BirthdayCake({ tasks, task2Completed }) {
       <img src="/cake.webp" alt="Birthday Cake" className="w-64 h-64 sm:w-[350px] sm:h-64 mb-4" />
 
       {/* Surprise Message Button */}
-      <Button variant="outline" size="md" className="mt-4" onClick={() => setShowPopup(true)}>
+      <Button variant="outline" size="md" className="mt-4 tracking-widest" onClick={() => setShowPopup(true)}>
         🎁 Surprise Message
       </Button>
 
@@ -27,16 +27,16 @@ export default function BirthdayCake({ tasks, task2Completed }) {
         >
           <div className="bg-[#27272c] p-4 sm:p-6 rounded-xl text-center shadow-lg w-[90%] sm:w-[60%]">
             <FaCheckCircle className="text-accent text-4xl sm:text-5xl mx-auto mb-4" />
-            <h2 className="text-white text-xl sm:text-2xl mb-2">🎉 Surprise! 🎉</h2>
+            <h2 className="text-white text-xl sm:text-2xl mb-2 tracking-wider">🎉 Surprise! 🎉</h2>
 
             {/* Conditional Message */}
             {!task2Completed ? (
-              <p className="text-white/60 text-sm sm:text-base mb-4">
+              <p className="text-white/60 text-sm/10 sm:text-base mb-4 tracking-wider">
                 No No No No, Not So Easy, Firstly, Complete The Task 2 From The CheckList At The Top Right 
                 To Reveal This Super Duper Surprise Message!!!!! Let's Gooooo!!!
               </p>
             ) : (
-              <p className="text-white text-sm sm:text-base mb-4">
+              <p className="text-white text-[sm/10 sm:text-base mb-4 tracking-wider">
                 Welll..the message gonna be changed according to who the "user" is, but for now, here's a message from chatgpt <br />
                 Wishing you a birthday as special as you are! May this year be
                 filled with endless laughter, unforgettable moments, and all the
