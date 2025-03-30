@@ -139,7 +139,7 @@ const TodoList = ({ tasks, setTasks }) => {
         >
           <div className="bg-[#27272c] p-4 sm:p-6 rounded-xl text-center shadow-lg w-[90%] sm:w-[60%]">
             <FaCheckCircle className="text-accent text-4xl sm:text-5xl mx-auto mb-4" />
-            <h2 className="text-white text-xl sm:text-2xl mb-2 tracking-wider">🎆Final Surprise Unlocked Yay!🎆</h2>
+            <h2 className="text-white text-xl sm:text-2xl mb-2 tracking-wider">🎆Final Surprise Message?!🎆</h2>
             <p className="text-white text-sm/10 sm:text-base mb-4 tracking-wider">
               Congratulations! You've completed all the tasks. Here's your final surprise message:
               <br />

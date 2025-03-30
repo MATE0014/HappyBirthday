@@ -30,20 +30,20 @@ export default function BirthdayCake({ tasks, task2Completed }) {
             <h2 className="text-white text-xl sm:text-2xl mb-2 tracking-wider">🎉 Surprise! 🎉</h2>
 
             {/* Conditional Message */}
-            {!task2Completed ? (
-              <p className="text-white/60 text-sm/10 sm:text-base mb-4 tracking-wider">
-                No No No No, Not So Easy, Firstly, Complete The Task 2 From The CheckList At The Top Right 
-                To Reveal This Super Duper Surprise Message!!!!! Let's Gooooo!!!
-              </p>
-            ) : (
-              <p className="text-white text-[sm/10 sm:text-base mb-4 tracking-wider">
-                Welll..the message gonna be changed according to who the "user" is, but for now, here's a message from chatgpt <br />
-                Wishing you a birthday as special as you are! May this year be
-                filled with endless laughter, unforgettable moments, and all the
-                happiness you deserve. Here's to new adventures, dreams coming
-                true, and a future as bright as your smile! 🎂✨
-              </p>
-            )}
+            <p className={`font-robotoCondensed text-white ${!task2Completed ? "text-white/60" : "text-white"} text-sm/10 sm:text-base mb-4 tracking-wider`}> 
+              {!task2Completed ? (
+                "No No No No, Not So Easy, Firstly, Complete The Task 2 From The CheckList At The Top Right " +
+                "To Reveal This Super Duper Surprise Message!!!!! Let's Gooooo!!!"
+              ) : (
+                "Achievement Unlocked! Survive 6575 days (Actually \"69\"40, but meh, according to docs, its still 6575 haha) " +
+                "\n\nA very happy birthday to my besto friendo, Now, I know you didn't wish yourself, and neither you smiled nicely," +
+                "You just clicked through the tasks to unlock this message, So now, While we're here, Smileeeeeeeeeee, Yeah, That's Better" +
+                ", You really do look better when you smile, I mean, You're already the best, But yeah, That smile makes you \"better-ry best\"" +
+                " (Haha makes no sense, Ofc I'm stoopid) \n" +
+                "Anyways, Enough of jokes, The real message yeah, Sorry, It's there at the last task, I just made you read this so you can smile" +
+                ", Please do, It makes me happie happie happieeee too, SO DO IT HAHA!!!"
+              )}
+            </p>
 
             <Button variant="outline" size="md" className="mt-4" onClick={() => setShowPopup(false)}>
               Close

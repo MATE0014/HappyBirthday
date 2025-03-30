@@ -1,10 +1,16 @@
-import { Pacifico } from "next/font/google";
+import { Pacifico, Roboto_Condensed } from "next/font/google";
 import "./globals.css";
 
 const pacifico = Pacifico({
   subsets: ["latin"],
   weight: "400",
   variable: "--font-pacifico",
+});
+
+const robotoCondensed = Roboto_Condensed({
+  subsets: ["latin"],
+  weight: ["300", "400", "700"],
+  variable: "--font-roboto-condensed",
 });
 
 export const metadata = {

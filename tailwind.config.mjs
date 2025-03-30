@@ -18,10 +18,11 @@ export default {
   		lg: '960px',
   		xl: '1200px'
   	},
-  	fontFamily: {
-  		primary: 'var(--font-pacifico)'
-  	},
   	extend: {
+		fontFamily: {
+			primary: 'var(--font-pacifico)',
+			robotoCondensed: "var(--font-roboto-condensed), sans-serif",
+		},
   		colors: {
   			primary: '#1c1c22',
   			accent: {

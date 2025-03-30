@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
+import { useRouter } from "next/navigation";
 import EntryAnimation from "@/components/EntryAnimation";
 import BalloonsGallery from "@/components/BalloonsGallery";
 import BirthdayCake from "@/components/BirthdayCake";
@@ -8,10 +9,24 @@ import TodoList from "@/components/ToDoList";
 import MainWish from "@/components/MainWish";
 
 export default function Home() {
+  const router = useRouter();
   const [showContent, setShowContent] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(null); // Start as null to avoid flash
   const todoListRef = useRef(null);
 
-  // Initialize tasks with only the first task enabled
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const auth = localStorage.getItem("authenticated") === "true";
+
+    setIsAuthenticated(auth);
+
+    if (!auth) {
+      router.replace("/login");
+    }
+  }, [router]);
+
+  // Tasks for To-Do List
   const [tasks, setTasks] = useState([
     { text: "Wish Yourself A Happy Birthday!", completed: false, disabled: false },
     { text: "Blow Candles On The Cake!", completed: false, disabled: true },
@@ -20,16 +35,16 @@ export default function Home() {
     { text: "Close Eyes Before The Surprise", completed: false, disabled: true },
   ]);
 
-  // Track if Task 2 is completed
   const task2Completed = tasks[1]?.completed;
 
   const handleGifClick = () => {
     const newTasks = [...tasks];
-    newTasks[3].disabled = false; // Enable Task 4
+    newTasks[3].disabled = false;
     setTasks(newTasks);
   };
 
   useEffect(() => {
+    // Background star animation
     const canvas = document.createElement("canvas");
     canvas.style.position = "fixed";
     canvas.style.top = "0";
@@ -111,7 +126,7 @@ export default function Home() {
         e.target.tagName === "A" ||
         e.target.closest("button") ||
         e.target.closest("a") ||
-        (todoListRef.current && todoListRef.current.contains(e.target)) // Ignore clicks inside To-Do List
+        (todoListRef.current && todoListRef.current.contains(e.target))
       ) {
         return;
       }
@@ -141,6 +156,15 @@ export default function Home() {
     };
   }, []);
 
+   // Prevent rendering until authentication is confirmed
+   if (isAuthenticated === null) {
+    return <div className="min-h-screen flex items-center justify-center text-white">Loading...</div>;
+  }
+
+  if (!isAuthenticated) {
+    return null;
+  }
+
   return (
     <main className="min-h-screen flex flex-col items-center justify-center text-white">
       {!showContent && <EntryAnimation onComplete={() => setShowContent(true)} />}
@@ -149,16 +173,11 @@ export default function Home() {
           <div className="fixed top-4 right-4 z-50" ref={todoListRef}>
             <TodoList tasks={tasks} setTasks={setTasks} />
           </div>
-
           <div className="text-4xl sm:text-6xl font-bold mb-4 sm:mb-8 text-center">
             <MainWish />
           </div>
-          <div className="w-full max-w-md sm:max-w-lg">
-            <BirthdayCake tasks={tasks} task2Completed={task2Completed} />
-          </div>
-          <div className="w-full max-w-md sm:max-w-lg">
+          <BirthdayCake tasks={tasks} task2Completed={task2Completed} />
           <BalloonsGallery onGifClick={handleGifClick} />
-          </div>
         </>
       )}
     </main>
