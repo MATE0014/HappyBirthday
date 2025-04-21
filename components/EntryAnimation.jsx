@@ -85,7 +85,7 @@ export default function EntryAnimation({ onComplete }) {
             transition={{ delay: 3, duration: 1 }}
             className="text-6xl/[3.5rem] font-bold tracking-wider"
           >
-            Happy Birthday, Anushkaa!
+            Happy Birthday, User!
           </motion.h1>
         </motion.div>
       )}

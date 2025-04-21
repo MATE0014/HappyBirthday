@@ -35,13 +35,7 @@ export default function BirthdayCake({ tasks, task2Completed }) {
                 "No No No No, Not So Easy, Firstly, Complete The Task 2 From The CheckList At The Top Right " +
                 "To Reveal This Super Duper Surprise Message!!!!! Let's Gooooo!!!"
               ) : (
-                "Achievement Unlocked! Survive 6575 days (Actually \"69\"40, but meh, according to docs, its still 6575 haha) " +
-                "\n\nA very happy birthday to my besto friendo, Now, I know you didn't wish yourself, and neither you smiled nicely," +
-                "You just clicked through the tasks to unlock this message, So now, While we're here, Smileeeeeeeeeee, Yeah, That's Better" +
-                ", You really do look better when you smile, I mean, You're already the best, But yeah, That smile makes you \"better-ry best\"" +
-                " (Haha makes no sense, Ofc I'm stoopid) \n" +
-                "Anyways, Enough of jokes, The real message yeah, Sorry, It's there at the last task, I just made you read this so you can smile" +
-                ", Please do, It makes me happie happie happieeee too, SO DO IT HAHA!!!"
+                "Achievement Unlocked! Survive (no of days) days"
               )}
             </p>
 

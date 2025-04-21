@@ -13,7 +13,7 @@ export default function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (password === "anuxkaa is the best") {
+    if (password === "password") {
       localStorage.setItem("authenticated", "true");
       document.cookie = "authenticated=true; path=/; max-age=86400";
       router.push("/");

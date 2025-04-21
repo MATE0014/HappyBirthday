@@ -141,16 +141,9 @@ const TodoList = ({ tasks, setTasks }) => {
             <FaCheckCircle className="text-accent text-4xl sm:text-5xl mx-auto mb-4" />
             <h2 className="text-white text-xl sm:text-2xl mb-2 tracking-wider">🎆Final Surprise Message?!🎆</h2>
             <p className="text-white text-sm/10 sm:text-base mb-4 tracking-wider">
-              So you're finally here Anuxkaa maam?? Nicee, Happie happie birthday once again, Hope I was able to make import PropTypes from 'prop-types'
-              a bit special, And I really wish you enjoy the day, And, Here's the message you've been doing tasks for haha
+              para 1 of bday msg, beginning
               <br /> <br />
-              Writing this, To literally my closest friend, And one of the bestest people I've ever met in my life, Anushka! I'm greatful
-              that we met, And I'll always treasure the moments we've lived together, Thank you for being here, You might not feel it, But
-              your presence does make it ALOT better for me, And and and and, Smile please, If you cry, I'll get sad fr, So dontcha dare cry,
-               Vrna chocolate launga and khud kha jauga han bta rha hu, Smile ab, Yep, Just like that, Oh han I'm getting off the topic, Ye message
-                to birthday ke lei tha, Congratulations, You're no longer a "minor" (acc to documents, hahaha), Happie Birthday firse, And, Don't 
-                forget to smile, And enjoy the day!!!!!!!!
-
+              para 2 of bday msg, description
             </p>
 
             {/* Close Button with custom CSS */}

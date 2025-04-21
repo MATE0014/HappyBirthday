@@ -28,11 +28,11 @@ export default function Home() {
 
   // Tasks for To-Do List
   const [tasks, setTasks] = useState([
-    { text: "Wish Yourself A Happy Birthday!", completed: false, disabled: false },
-    { text: "Blow Candles On The Cake!", completed: false, disabled: true },
-    { text: "Now Smile Cause You Look Better With It", completed: false, disabled: true },
+    { text: "Task 1 : Fun", completed: false, disabled: false },
+    { text: "Task 2 : Fun", completed: false, disabled: true },
+    { text: "Task 3 : Fun", completed: false, disabled: true },
     { text: "Find The Cake, And Eat It!", completed: false, disabled: true },
-    { text: "Close Eyes Before The Surprise", completed: false, disabled: true },
+    { text: "Task 4 : Fun", completed: false, disabled: true },
   ]);
 
   const task2Completed = tasks[1]?.completed;

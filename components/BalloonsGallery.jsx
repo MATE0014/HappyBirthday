@@ -6,16 +6,16 @@ import { motion } from "framer-motion";
 
 export default function BalloonsGallery({ onGifClick }) {
   const photos = [
-    "/gallery/one.jpg",
-    "/gallery/five.jpg",
-    "/gallery/two.jpg",
-    "/gallery/three.jpg",
-    "/gallery/six.jpg",
-    "/gallery/seven.jpg",
-    "/gallery/eight.jpg",
-    "/gallery/four.jpg",
-    "/gallery/nine.jpg",
-    "/gallery/ten.jpg",
+    "./sample.jfif",
+    "./sample.jfif",
+    "./sample.jfif",
+    "./sample.jfif",
+    "./sample.jfif",
+    "./sample.jfif",
+    "./sample.jfif",
+    "./sample.jfif",
+    "./sample.jfif",
+    "./sample.jfif",
     "/hidden.gif",
   ];
 

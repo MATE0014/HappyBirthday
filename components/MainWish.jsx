@@ -20,9 +20,9 @@ export default function MainWish() {
         className="inline-block font-bold animate-glow"
         style={{ color: `hsl(${hue}, 100%, 50%)` }}
       >
-        18th
+        xth
       </span>{" "}
-      Birthday, Anushkaa!
+      Birthday, User!
     </h1>
   );
 }
